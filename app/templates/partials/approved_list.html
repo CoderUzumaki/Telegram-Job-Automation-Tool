@@ -1,0 +1,24 @@
+{% for message in messages %}
+<button
+  class="job-item {% if selected and selected.id == message.id %}selected{% endif %}"
+  hx-get="/api/messages/{{ message.id }}?readonly=1"
+  hx-target="#detail-panel"
+  hx-swap="innerHTML"
+>
+  <div class="job-item-top">
+    <span class="company">{{ message.extraction.company.value or "Unknown" }}</span>
+    {% if message.relevance_score is not none %}
+    <span class="score-badge score-{{ 'high' if message.relevance_score >= 80 else ('mid' if message.relevance_score >= 50 else 'low') }}">
+      {{ message.relevance_score }}
+    </span>
+    {% endif %}
+  </div>
+  <div class="job-item-sub">{{ message.extraction.role.value or "Role unknown" }}</div>
+  <div class="job-item-meta">
+    {{ message.links|length }} links
+    {% if message.export_state == 'exported' %} · exported{% elif message.export_state == 'failed' %} · export failed{% endif %}
+  </div>
+</button>
+{% else %}
+<div class="empty-state">No approved jobs yet.</div>
+{% endfor %}

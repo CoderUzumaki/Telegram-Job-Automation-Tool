@@ -1,0 +1,8 @@
+{
+  "company": {"value": "Mymanah", "source": "parser"},
+  "role": {"value": "Backend + AI/ML Engineer Intern (+PPO)", "source": "parser"},
+  "batch": {"value": "2025/2026/2027", "source": "parser"},
+  "stipend": {"value": "₹25,000 - ₹30,000/month", "source": "parser"},
+  "location": {"value": "Remote", "source": "parser"},
+  "tags": ["ppo", "remote"]
+}

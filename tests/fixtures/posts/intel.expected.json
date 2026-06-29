@@ -1,0 +1,8 @@
+{
+  "company": {"value": "Intel", "source": "parser"},
+  "role": {"value": "AI software development Intern", "source": "parser"},
+  "batch": {"value": "2025/2026/2027", "source": "parser"},
+  "stipend": {"value": "40,000 - 50,000/month", "source": "parser"},
+  "location": {"value": "Bangalore", "source": "parser"},
+  "tags": []
+}

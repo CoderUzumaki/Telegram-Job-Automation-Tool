@@ -1,0 +1,16 @@
+Company - Matiks
+Role - UI Engineer Intern
+Batch - 2025/2026/2027
+Stipend - 30,000 - 35,000/month
+Location - Bangalore
+
+Responsibilities:
+• Build responsive and high-quality user interfaces
+• Collaborate with design and backend teams
+
+Requirements:
+• Strong knowledge of HTML, CSS, JavaScript
+• Familiarity with React or modern frontend frameworks
+
+How to Apply:
+https://docs.google.com/forms/d/e/1FAIpQLSdvwSGS5Yl9QLN6xd15ekQRzjMcSTZDTOBmhi6YM0Y_WiHtsQ/viewform

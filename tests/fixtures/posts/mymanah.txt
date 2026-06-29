@@ -1,0 +1,17 @@
+5) Company - Mymanah
+Role - Backend + AI/ML Engineer Intern (+PPO)
+Batch - 2025/2026/2027
+Original source: SDE Jobs & Internships (Premium)
+Stipend - ₹25,000 - ₹30,000/month
+Location - Remote
+
+Job Details:
+• Design and develop scalable backend systems using Node.js and Express.js
+• Build and maintain robust REST APIs
+• Work with PostgreSQL and Redis
+
+Eligibility:
+• B.Tech / B.E. (CS or related) – 2026/2027 batch
+
+How to Apply:
+Send your resume + GitHub/live project links to: support@mymanah.com

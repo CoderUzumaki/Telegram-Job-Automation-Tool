@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Inbox — Job Radar{% endblock %}
+{% block content %}
+<div class="browse-bar">
+  <form method="get" action="/" class="browse-form">
+    <label>Date <input type="date" name="date" value="{{ posted_date }}"></label>
+    <label>Last N <input type="number" name="last_n" min="1" max="500" value="{{ last_n }}" placeholder="All"></label>
+    <button type="submit" class="btn">Apply</button>
+    <a href="/" class="btn btn-link">Clear</a>
+  </form>
+</div>
+<div class="inbox-layout">
+  <aside class="list-panel" id="job-list">
+    {% include "partials/job_list.html" %}
+  </aside>
+  <section class="detail-panel" id="detail-panel">
+    {% if selected %}
+      {% with message=selected %}
+        {% include "partials/job_detail.html" %}
+      {% endwith %}
+    {% else %}
+      <div class="empty-state">No Post for Now.</div>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

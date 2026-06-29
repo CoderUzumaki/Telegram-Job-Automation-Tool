@@ -1,0 +1,77 @@
+<div class="detail-content">
+  <header class="detail-header">
+    <div>
+      <h1>{{ message.extraction.company.value or "Unknown company" }}</h1>
+      <p class="subtitle">{{ message.extraction.role.value or "Unknown role" }}</p>
+    </div>
+    {% if message.relevance_score is not none %}
+    <span class="score-badge score-{{ 'high' if message.relevance_score >= 80 else ('mid' if message.relevance_score >= 50 else 'low') }}">
+      {{ message.relevance_score }}
+    </span>
+    {% endif %}
+  </header>
+
+  <table class="fields-table">
+    {% for label, field in [
+      ("Company", message.extraction.company),
+      ("Role", message.extraction.role),
+      ("Batch", message.extraction.batch),
+      ("Stipend", message.extraction.stipend),
+      ("Location", message.extraction.location),
+    ] %}
+    <tr>
+      <th>{{ label }}</th>
+      <td>{{ field.value or "—" }}</td>
+      <td>{% if field.source %}<span class="source-pill source-{{ field.source }}">{{ field.source }}</span>{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% if message.extraction.tags %}
+  <div class="tags">
+    {% for tag in message.extraction.tags %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if message.links %}
+  <section class="links-section">
+    <h2>Links ({{ message.links|length }})</h2>
+    <ul>
+      {% for link in message.links %}
+      <li><a href="{{ link.url }}" target="_blank" rel="noopener"><strong>{{ link.domain }}</strong> — {{ link.url }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if message.relevance_reason %}
+  <blockquote class="reason">{{ message.relevance_reason }}</blockquote>
+  {% endif %}
+
+  {% if message.job_description %}
+  <details class="job-description" open>
+    <summary>Job description</summary>
+    <pre>{{ message.job_description }}</pre>
+  </details>
+  {% endif %}
+
+  <details class="raw-post">
+    <summary>Raw post</summary>
+    <pre>{{ message.raw_text }}</pre>
+  </details>
+
+  <div class="action-bar">
+    <button
+      class="btn btn-approve"
+      hx-post="/api/messages/{{ message.id }}/approve"
+      hx-swap="none"
+    >Approve</button>
+    <button
+      class="btn btn-reject"
+      hx-post="/api/messages/{{ message.id }}/reject"
+      hx-swap="none"
+    >Reject</button>
+  </div>
+</div>

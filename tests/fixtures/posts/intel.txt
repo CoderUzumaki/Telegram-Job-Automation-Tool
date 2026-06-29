@@ -1,0 +1,19 @@
+Company - Intel
+Role - AI software development Intern
+Batch - 2025/2026/2027
+Original source: SDE Jobs & Internships (Premium)
+Stipend - 40,000 - 50,000/month
+Location - Bangalore
+
+Role Focus:
+• Contributing to AI software solution design and development
+• Computer vision, machine learning, and deep learning
+• Model implementation, performance tuning, applied research
+
+Required Experience (3+ months):
+• Python and C++
+• PyTorch, TensorFlow, ONNX Runtime, OpenVINO
+
+Key Details:
+• 16 hours/week, hybrid format
+• 6-12 months starting Fall 2026
