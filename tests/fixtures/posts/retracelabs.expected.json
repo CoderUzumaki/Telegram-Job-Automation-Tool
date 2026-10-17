@@ -1,8 +1,0 @@
-{
-  "company": {"value": "Retrace Labs", "source": "parser"},
-  "role": {"value": "Software Testing Intern (Quality Assurance & Automation)", "source": "parser"},
-  "batch": {"value": "2025/2027/2028", "source": "parser"},
-  "stipend": {"value": "20,000 - 30,000/month", "source": "parser"},
-  "location": {"value": "Remote", "source": "parser"},
-  "tags": ["remote"]
-}

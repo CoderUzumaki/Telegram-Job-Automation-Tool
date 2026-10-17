@@ -1,7 +1,0 @@
-{
-  "batch": "2025",
-  "strict_batch": true,
-  "roles": ["Software Engineer", "SDE", "Backend Developer", "Full Stack", "AI/ML Engineer"],
-  "skills": ["Python", "JavaScript", "FastAPI", "React", "Node.js", "DSA"],
-  "locations": ["Remote", "Bangalore", "Gurgaon", "Gurugram", "Mumbai", "Hyderabad"]
-}

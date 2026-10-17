@@ -1,8 +1,0 @@
-{
-  "company": {"value": "Optiver", "source": "parser"},
-  "role": {"value": "Software Engineer Intern", "source": "parser"},
-  "batch": {"value": "2027/2028", "source": "parser"},
-  "stipend": {"value": "2 Lakh/month", "source": "parser"},
-  "location": {"value": "Mumbai", "source": "parser"},
-  "tags": []
-}
