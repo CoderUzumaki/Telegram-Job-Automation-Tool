@@ -1,4 +1,0 @@
-{
-  "include": ["intern", "sde", "software", "backend", "full stack", "ppo"],
-  "exclude": ["experienced only", "3+ years experience", "senior only", "not for students"]
-}

@@ -1,0 +1,152 @@
+#root {
+  min-height: 100vh;
+}
+
+.welcome {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 42px clamp(28px, 7vw, 92px) 28px;
+  background:
+    radial-gradient(ellipse at 78% 36%, rgb(28 67 57 / 35%), transparent 42%),
+    radial-gradient(ellipse at 80% 110%, rgb(21 48 61 / 38%), transparent 40%),
+    #0a1118;
+}
+
+.welcome::after {
+  position: absolute;
+  top: 17%;
+  right: -110px;
+  width: min(44vw, 520px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(173 220 195 / 9%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 42px rgb(173 220 195 / 2%), 0 0 0 84px rgb(173 220 195 / 2%);
+  content: "";
+  pointer-events: none;
+}
+
+.welcome__brand,
+.welcome__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome__brand {
+  justify-content: flex-start;
+  gap: 12px;
+  color: #d5e0e6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.welcome__mark {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  gap: 3px;
+  padding: 6px;
+  border: 1px solid rgb(164 243 194 / 30%);
+  border-radius: 9px;
+  background: rgb(164 243 194 / 7%);
+}
+
+.welcome__mark span {
+  height: 45%;
+  border-radius: 2px;
+  background: #a4f3c2;
+}
+
+.welcome__mark span:nth-child(2) {
+  height: 70%;
+}
+
+.welcome__mark span:nth-child(3) {
+  height: 100%;
+}
+
+.welcome__content {
+  position: relative;
+  z-index: 1;
+  width: min(620px, 100%);
+  margin: 5vh 0 9vh;
+}
+
+.welcome__eyebrow,
+.welcome__footer {
+  color: #81919a;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+
+.welcome__eyebrow {
+  margin: 0 0 24px;
+  color: #a4f3c2;
+}
+
+.welcome h1 {
+  margin: 0;
+  color: #f0f4f3;
+  font-family: "Segoe UI", sans-serif;
+  font-size: clamp(42px, 6.6vw, 76px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 1.08;
+}
+
+.welcome__description {
+  max-width: 430px;
+  margin: 24px 0 0;
+  color: #9baab1;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.welcome__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  padding: 10px 14px;
+  border: 1px solid rgb(166 190 180 / 13%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 3%);
+  color: #c0ccc9;
+  font-size: 12px;
+}
+
+.welcome__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a4f3c2;
+  box-shadow: 0 0 12px rgb(164 243 194 / 65%);
+}
+
+.welcome__footer {
+  position: relative;
+  z-index: 1;
+  gap: 20px;
+  border-top: 1px solid rgb(178 199 203 / 10%);
+  padding-top: 18px;
+  font-size: 9px;
+}
+
+@media (max-width: 560px) {
+  .welcome {
+    padding-top: 28px;
+  }
+
+  .welcome__footer {
+    flex-wrap: wrap;
+    line-height: 1.6;
+  }
+}

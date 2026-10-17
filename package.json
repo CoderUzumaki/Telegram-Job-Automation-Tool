@@ -1,0 +1,18 @@
+{
+  "name": "job-radar",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.31.0",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @job-radar/desktop tauri dev",
+    "build": "pnpm --filter @job-radar/desktop build",
+    "typecheck": "pnpm --filter @job-radar/desktop typecheck",
+    "lint": "pnpm --filter @job-radar/desktop lint",
+    "test": "pnpm --filter @job-radar/desktop test",
+    "check:python": "uv run --project worker --locked --cache-dir .uv-cache ruff check worker && uv run --project worker --locked --cache-dir .uv-cache pytest worker/tests",
+    "check:rust": "cargo fmt --manifest-path apps/desktop/src-tauri/Cargo.toml --check && cargo clippy --manifest-path apps/desktop/src-tauri/Cargo.toml --locked -- -D warnings && cargo test --manifest-path apps/desktop/src-tauri/Cargo.toml --locked"
+  }
+}
