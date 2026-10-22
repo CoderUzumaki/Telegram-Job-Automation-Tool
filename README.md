@@ -26,6 +26,16 @@ uv sync --project worker --dev
 
 ## Common commands
 
+JR-003 is in progress: the development worker can now run with
+`uv run --project worker python -m job_radar`. It accepts private NDJSON requests
+on stdin, requires `app.hello` before `app.health`, and exits cleanly on EOF.
+Framing/validation, command dispatch and stream lifecycle are separate modules.
+Invalid envelopes terminate the worker with sanitized stderr diagnostics.
+The [Rust supervisor](docs/worker-supervisor.md) now supports private child pipes,
+request correlation, timeouts, bounded recovery and graceful/forced shutdown,
+with real-worker integration tests. Shared contract validation and desktop/native
+lifecycle wiring are still pending; the UI is not connected.
+
 ```powershell
 pnpm dev
 pnpm lint
