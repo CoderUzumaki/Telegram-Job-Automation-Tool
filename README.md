@@ -40,6 +40,11 @@ The desktop app uses Tauri's native host, so `pnpm dev` requires the Rust toolch
 
 ## Project layout
 
+The [architecture decisions](docs/decisions/README.md) describe module ownership,
+dependency boundaries and the next IPC increment (JR-003). The
+[release policy register](docs/release-policy.md) records unresolved review gates;
+JR-002 documentation is prepared, with human review pending.
+
 ```text
 apps/desktop/       Tauri host and React frontend
 worker/             Python worker package and its tests
